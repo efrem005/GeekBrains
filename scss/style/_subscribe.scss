@@ -1,0 +1,120 @@
+.subscribe {
+    background: url("../img/layers-41.jpg");
+    background-repeat: no-repeat;
+    background-color: #f2f2f2;
+    max-width: 1609px;
+    height: 438px;
+    margin: 0 auto;
+    margin-bottom: 109px;
+    & > .container {
+      display: flex;
+      flex-flow: nowrap;
+      justify-content: space-between;
+    }
+    &__left {
+      width: 505px;
+      padding-top: 109px;
+      img {
+        width: 86px;
+        height: 86px;
+        float: left;
+      }
+      p {
+        margin-left: 111px;
+        margin-top: 9px;
+        font-style: italic;
+        color: $textColor;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+        &:nth-child(3) {
+          margin-top: 19px;
+          color: $maincolor;
+          font-family: sans-serif;
+          font-size: 15px;
+          font-weight: 700;
+          letter-spacing: 0.4px;
+          line-height: 13px;
+          font-style: normal;
+          span {
+            color: $textColor;
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: 0.3px;
+          }
+        }
+      }
+      &-pagination {
+        margin-top: 28px;
+        margin-left: 105px;
+        span {
+          display: inline-block;
+          margin-left: 10px;
+          width: 38px;
+          height: 7px;
+          cursor: pointer;
+          &:nth-child(1) {
+            border-bottom: 4px solid #f2f2f2;
+          }
+          &:nth-child(2) {
+            border-bottom: 4px solid $maincolor;
+          }
+          &:nth-child(3) {
+            border-bottom: 4px solid #d6d6d6;
+          }
+        }
+      }
+    }
+    &__right {
+      width: 570px;
+      height: 438px;
+      p {
+        margin-top: 146px;
+        font-size: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 1.8px;
+        line-height: 24px;
+        span {
+          font-size: 12px;
+          letter-spacing: 1.6px;
+        }
+      }
+      &-email {
+        display: flex;
+        justify-content: center;
+        margin-top: 27px;
+        input {
+          width: 228px;
+          border-radius: 30px 0 0 30px;
+          border: none;
+          background-color: #e1e1e1;
+          padding: 16px 28px;
+          font-size: 14px;
+          letter-spacing: 0.35px;
+          &:focus {
+            outline: none;
+          }
+        }
+        button {
+          padding: 16px 20px;
+          border: none;
+          background-color: $maincolor;
+          border-radius: 0 23px 23px 0;
+          color: $colorRegul;
+          font-size: 14px;
+          letter-spacing: 0.35px;
+          cursor: pointer;
+          &:hover {
+            background-color: $colorRegul;
+            color: $maincolor;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }

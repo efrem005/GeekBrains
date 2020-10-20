@@ -1,0 +1,39 @@
+.catalog {
+    height: 823px;
+    margin-top: 99px;
+    margin-bottom: 84px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    &__offer {
+      width: 560px;
+      &-link {
+        position: relative;
+        display: flex;
+        &:hover {
+          outline: 4px solid #e6e6e6;
+        }
+        img {
+          height: 100%;
+          width: 100%;
+        }
+        p {
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+          background: $colorRegul;
+          border-radius: 2px;
+          position: absolute;
+          top: 25px;
+          font-size: 18px;
+          padding: 12px 17px;
+          font-weight: 900;
+          span {
+            font-size: 31px;
+            color: $maincolor;
+          }
+        }
+      }
+    }
+  }
