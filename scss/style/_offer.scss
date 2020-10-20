@@ -1,0 +1,64 @@
+.offer {
+    height: 529px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 96px;
+    &__seller {
+      height: inherit;
+      position: relative;
+      img {
+        width: 767px;
+        height: 529px;
+        object-fit: cover;
+        object-position: top;
+      }
+      p {
+        position: absolute;
+        top: 136px;
+        left: 38px;
+        color: $colorRegul;
+        font-size: 54px;
+        font-weight: 700;
+        line-height: 28px;
+        text-transform: uppercase;
+        span:first-child {
+          letter-spacing: 1.5px;
+          line-height: 54px;
+          color: $maincolor;
+        }
+        span:last-child {
+          font-size: 32px;
+          letter-spacing: 0.6px;
+          line-height: 32px;
+        }
+      }
+    }
+    &__featured {
+      width: 373px;
+      background: #222224;
+      color: #fbfbfb;
+      &-cart {
+        padding-top: 45px;
+        padding-left: 33px;
+        padding-right: 42px;
+      }
+      img {
+        float: left;
+      }
+      h2 {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        margin-left: 79px;
+        margin-top: 6px;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 0.34px;
+        line-height: 24px;
+        margin-left: 79px;
+        margin-top: 12px;
+      }
+    }
+  }
