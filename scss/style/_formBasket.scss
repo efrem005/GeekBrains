@@ -1,0 +1,88 @@
+.shopping {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 79px;
+  &__address,
+  &__discount,
+  .shopping__total {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    width: 360px;
+  }
+  h4 {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  input {
+    padding: 16px 18px;
+    width: 360px;
+    border: 1px solid $lineColor;
+  }
+  button {
+    @extend .button;
+    font-size: 11px;
+    font-weight: 900;
+  }
+  &-line {
+    border-bottom: 1px solid #e2e2e2;
+  }
+}
+
+.shopping__address {
+  display: flex;
+  justify-content: space-between;
+  height: 268px;
+  button {
+    width: 120px;
+  }
+}
+
+.shopping__discount {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 78px;
+  height: 268px;
+  label {
+    font-size: 14px;
+  }
+  button {
+    width: 138px;
+  }
+}
+
+.shopping__total {
+  background-color: #f5f3f3;
+  padding: 43px;
+  justify-content: space-between;
+  height: 218px;
+  h5 {
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: right;
+    span {
+      margin-left: 10px;
+    }
+  }
+  h4 {
+    text-align: right;
+    span {
+      margin-left: 10px;
+      color: $maincolor;
+    }
+  }
+  button {
+    font-size: 16px;
+    background-color: $maincolor;
+    border: none;
+    color: $colorRegul;
+    font-weight: 700;
+    &:hover {
+      background-color: $colorRegul;
+      outline: 1px solid $maincolor;
+      color: $maincolor;
+    }
+  }
+}
