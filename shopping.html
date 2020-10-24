@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style1.css" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <title>shopping</title>
+    <script src="https://kit.fontawesome.com/861689887d.js"></script>
+  </head>
+  <body>
+    <header class="header container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="logo" class="logo__img" />
+        <div class="logo__name">Bran<span>d</span></div>
+      </a>
+
+      <form class="search" method="get">
+        <div class="search__browse">
+          Browse <i class="fas fa-caret-down"></i>
+        </div>
+        <input
+          type="text"
+          class="search__input"
+          name="search"
+          placeholder="Search for Item..."
+        />
+        <button class="search__button"><i class="fas fa-search"></i></button>
+      </form>
+
+      <div class="cart">
+        <img src="img/cart.png" alt="cart" /><span>2</span>
+      </div>
+      <div class="my-account">
+        <a href="#">My Account<i class="fas fa-caret-down"></i></a>
+      </div>
+    </header>
+
+    <div class="header-line"></div>
+
+    <nav class="top-nav">
+      <ul class="menu-list">
+        <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">Man</a></li>
+        <li class="menu-item">
+          <a href="#" class="menu-link active">Women</a>
+        </li>
+        <li class="menu-item"><a href="#" class="menu-link">Kids</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">Accoseriese</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">Featured</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">Hot Deals</a></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="crumps">
+        <div class="container">
+          <h2>New Arrivals</h2>
+          <nav>Home / Men / <span>New Arrivals</span></nav>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="basket__header">
+          <div class="div">Product Details</div>
+          <div class="div">unite Price</div>
+          <div class="div">Quantity</div>
+          <div class="div">shipping</div>
+          <div class="div">Subtotal</div>
+          <div class="div">ACTION</div>
+        </div>
+
+        <div class="basket__block">
+          <div class="basket__block-product">
+            <img src="./img/layer-43.jpg" alt="43" />
+            <div>
+              <a href="">Mango People T-shirt</a>
+              <p>
+                Color: <span>Red</span><br />
+                Size: <span>Xll</span>
+              </p>
+            </div>
+          </div>
+          <div class="div">$150</div>
+          <div class="div"><input type="number" value="2" /></div>
+          <div class="div">FREE</div>
+          <div class="div">$300</div>
+          <div class="div">
+            <a href="#"><i class="fas fa-times-circle"></i></a>
+          </div>
+        </div>
+
+        <div class="basket__block">
+          <div class="basket__block-product">
+            <img src="./img/layer-44.jpg" alt="44" />
+            <div>
+              <a href="">Mango People T-shirt</a>
+              <p>
+                Color: <span>Red</span><br />
+                Size: <span>Xll</span>
+              </p>
+            </div>
+          </div>
+          <div class="div">$150</div>
+          <div class="div"><input type="number" value="2" /></div>
+          <div class="div">FREE</div>
+          <div class="div">$300</div>
+          <div class="div">
+            <a href="#"><i class="fas fa-times-circle"></i></a>
+          </div>
+        </div>
+
+        <div class="basket__block">
+          <div class="basket__block-product">
+            <img src="./img/layer-45.jpg" alt="45" />
+            <div>
+              <a href="">Mango People T-shirt</a>
+              <p>
+                Color: <span>Red</span><br />
+                Size: <span>Xll</span>
+              </p>
+            </div>
+          </div>
+          <div class="div">$150</div>
+          <div class="div"><input type="number" value="2" /></div>
+          <div class="div">FREE</div>
+          <div class="div">$300</div>
+          <div class="div">
+            <a href="#"><i class="fas fa-times-circle"></i></a>
+          </div>
+        </div>
+
+        <!-- bottom -->
+
+        <div class="basket__bottom">
+          <button class="basket__bottom-reset" type="reset">
+            CLEAR SHOPPING CART
+          </button>
+          <button class="basket__bottom-submit" type="submit">
+            CONTINUE SHOPPING
+          </button>
+        </div>
+      </div>
+
+      <!-- dn -->
+
+      <section class="shopping container">
+        <form class="shopping__address" action="" method="get">
+          <h4>Shipping Address</h4>
+          <label for="country_list">
+            <input
+              id="country_list"
+              list="countrylist"
+              name="country"
+              placeholder="Bangladesh"
+            />
+            <datalist id="countrylist">
+              <option label="Bangladesh" value="Bangladesh"></option>
+              <option label="England" value="England"></option>
+              <option label="China" value="China"></option>
+            </datalist>
+          </label>
+          <input type="text" placeholder="State" />
+          <input type="text" placeholder="Postcode / Zip" />
+          <button type="submit">get a quote</button>
+        </form>
+        <form class="shopping__discount" action="" method="get">
+          <h4>coupon discount</h4>
+          <label for="coupon">Enter your coupon code if you have one</label>
+          <input type="text" placeholder="State" id="coupon" />
+          <button class="button">Apply coupon</button>
+        </form>
+        <form class="shopping__total" action="" method="get">
+          <h5>Sub total<span>$900</span></h5>
+          <h4>GRAND TOTAL<span>$900</span></h4>
+          <div class="shopping-line"></div>
+          <button type="submit" class="button button-pink">
+            proceed to checkout
+          </button>
+        </form>
+      </section>
+
+      <!-- Dn -->
+
+      <div class="subscribe">
+        <div class="container">
+          <div class="subscribe__left">
+            <img src="img/layer-40.png" alt="layer-40" />
+            <div class="subscribe__left-text">
+              <p>
+                “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a
+                pulvinar purus condimentum a. Aliquam condimentum mattis neque
+                sed pretium”
+              </p>
+              <p>Bin Burhan<br /><span>Dhaka, Bd</span></p>
+              <div class="subscribe__left-pagination">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <div class="subscribe__right">
+            <p>
+              Subscribe <br />
+              <span>FOR OUR NEWLETTER AND PROMOTION</span>
+            </p>
+            <form class="subscribe__right-email" method="POST">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter Your Email"
+                pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"
+              />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer__nav">
+          <div class="text__block">
+            <a class="text__block-logo" href="#">
+              <img src="img/logo.png" alt="logo" /><span>BRAN</span
+              ><span>D</span>
+            </a>
+            <p>
+              Objectively transition extensive data rather than cross functional
+              solutions. Monotonectally syndicate multidisciplinary materials
+              before go forward benefits. Intrinsicly syndicate an expanded
+              array of processes and cross-unit partnerships.
+            </p>
+            <p>
+              Efficiently plagiarize 24/365 action items and focused
+              infomediaries. Distinctively seize superior initiatives for
+              wireless technologies. Dynamically optimize.
+            </p>
+          </div>
+          <div class="text__company">
+            <h1>COMPANY</h1>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">How It Works</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="text__company">
+            <h1>INFORMATION</h1>
+            <ul>
+              <li><a href="#">Tearms &amp; Condition</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">How to Buy</a></li>
+              <li><a href="#">How to Sell</a></li>
+              <li><a href="#">Promotion</a></li>
+            </ul>
+          </div>
+          <div class="text__company">
+            <h1>SHOP CATEGORY</h1>
+            <ul>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Child</a></li>
+              <li><a href="#">Apparel</a></li>
+              <li><a href="#">Brows All</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__copy">&copy 2020 Brand All Rights Reserved.</div>
+        <div class="footer__social">
+          <a href="#"><i class="fab fa-facebook-square theme-slytherin"></i></a>
+          <a href="#"><i class="fab fa-twitter-square"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-pinterest-square"></i></a>
+          <a href="#"><i class="fab fa-google-plus-square"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
