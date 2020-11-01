@@ -1,0 +1,117 @@
+.description {
+  position: relative;
+  top: -80px;
+  min-height: 730px;
+  border: 1px solid #eaeaea;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 262px 80px;
+  & > .header-line {
+    width: 100%;
+  }
+  &__title {
+    color: #f16d7f;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__line {
+    width: 147px;
+    height: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-one {
+      width: 63px;
+      height: 1px;
+      background-color: #eaeaea;
+    }
+    &-center {
+      width: 63px;
+      height: 3px;
+      background-color: #ef5b70;
+    }
+  }
+  &__subtitle {
+    color: #4d4d4d;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  &__text {
+    color: #5e5e5e;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 21px;
+  }
+  &__option {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    p {
+      color: #b9b9b9;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      span {
+        color: #2f2f2f;
+      }
+    }
+  }
+  &__cash {
+    color: #ef5b70;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  &__form {
+    width: 540px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &-block {
+      display: flex;
+      flex-direction: column;
+      width: 144px;
+      label {
+        color: #2f2f2f;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+      input {
+        color: #222;
+        font-size: 13px;
+        padding: 8px 12px;
+        cursor: pointer;
+      }
+    }
+  }
+  button {
+    width: 537px;
+    height: 55px;
+    border: 1px solid #ef5b70;
+    background-color: #ffffff;
+    color: #ef5b70;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    img {
+      margin-right: 15px;
+    }
+    &:hover {
+      background-color: #e4e4e4;
+    }
+  }
+}
