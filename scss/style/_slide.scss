@@ -1,0 +1,28 @@
+.slider {
+  background-color: #f7f7f7;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  &__block {
+    width: 1609px;
+    min-height: 777px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i {
+      width: 47px;
+      height: 47px;
+      line-height: 47px;
+      text-align: center;
+      font-size: 35px;
+      color: $colorRegul;
+      background-color: #2a2a2a18;
+      cursor: pointer;
+      &:hover {
+        background-color: #2a2a2a4d;
+      }
+    }
+  }
+}
