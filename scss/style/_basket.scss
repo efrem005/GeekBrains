@@ -33,12 +33,20 @@
       height: 117px;
       object-fit: cover;
       object-position: top;
+      transition: transform 1s ease-in-out;
+      &:hover {
+        transform: scale(3);
+        outline: 1px solid $lineColor;
+      }
     }
     div {
       margin: 8px 0 20px 21px;
       a {
         text-transform: uppercase;
         font-weight: 600;
+        &:hover {
+          color: $maincolor;
+        }
       }
       p {
         padding-top: 30px;
@@ -83,6 +91,7 @@
     color: #4a4a4a;
     font-size: 14px;
     padding: 20px 38px 18px 39px;
-    @extend %button;
+    transition: all 0.4s ease;
+    @extend .button;
   }
 }

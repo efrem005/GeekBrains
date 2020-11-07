@@ -17,6 +17,9 @@ $lineColor: #eaeaea;
   }
 }
 
-.header-line {
-  border-bottom: 1px solid #ececec;
+.hidden {
+  opacity: 0;
+}
+.visible {
+  opacity: 1;
 }

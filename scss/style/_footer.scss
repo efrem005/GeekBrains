@@ -21,6 +21,7 @@
         color: $colorRegul;
         font-size: 36px;
         margin-left: 5px;
+        transition: color 0.4s ease-in-out;
         &:hover {
           color: $maincolor;
         }

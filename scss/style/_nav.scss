@@ -13,6 +13,25 @@
     & .menu-link {
       text-transform: uppercase;
       padding: 15px 20px;
+      position: relative;
+      transform: perspective(1px) translateZ(0);
+      &:hover::before {
+        left: 0;
+        right: 0;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 51%;
+        right: 51%;
+        bottom: -3px;
+        background: $maincolor;
+        height: 3px;
+        transition-property: left, right;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-out;
+      }
     }
   }
   & > .menu-link {
@@ -24,10 +43,22 @@
   }
 }
 
-.menu-link:hover {
+.active {
   border-bottom: 3px solid $maincolor;
 }
 
-.active {
-  border-bottom: 3px solid $maincolor;
+#menu-header-checkbox {
+  display: none;
+}
+
+#menu-header-checkbox ~ label {
+  display: none;
+  padding: 5px;
+  font-size: 30px;
+}
+
+#menu-header-checkbox:checked ~ .menu-list {
+  height: 270px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

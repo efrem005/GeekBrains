@@ -22,7 +22,8 @@
     border: 1px solid $lineColor;
   }
   button {
-    @extend %button;
+    transition: all 0.4s ease;
+    @extend .button;
     font-size: 11px;
     font-weight: 900;
   }

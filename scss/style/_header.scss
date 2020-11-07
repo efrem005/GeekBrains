@@ -2,10 +2,26 @@
   display: flex;
   min-height: 100px;
   align-items: center;
-  & > * {
-    height: inherit;
+  justify-content: space-between;
+  // border-bottom: 1px solid #ececec;
+  // & > * {
+  //   height: inherit;
+  //   display: flex;
+  //   align-content: center;
+  //   position: relative;
+  // }
+  &-line {
+    border-bottom: 1px solid #ececec;
+    box-sizing: content-box;
+  }
+  &__left,
+  &__right {
+    height: 38px;
     display: flex;
-    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__right {
     position: relative;
   }
 }
@@ -30,6 +46,9 @@
   border: 1px solid #e6e6e6;
   overflow: hidden;
   height: 38px;
+  display: flex;
+  align-content: center;
+  position: relative;
   & > .search__browse {
     height: inherit;
     width: 87px;
@@ -41,6 +60,7 @@
     letter-spacing: 0.35px;
     cursor: pointer;
     line-height: 38px;
+    transition: background-color 0.3s ease-in-out;
     &:hover {
       background-color: #a4a4a423;
     }
@@ -73,6 +93,7 @@
     border: none;
     cursor: pointer;
     background-color: $colorRegul;
+    transition: background-color 0.3s ease-in-out;
     &:hover {
       background-color: #a4a4a423;
     }
@@ -81,20 +102,27 @@
 
 .cart {
   position: relative;
-  margin-left: auto;
+  height: 38px;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   img {
     width: 32px;
     height: 29px;
     transform: rotate(0);
-    transition: transform 2s;
+
+    transition: transform 2s cubic-bezier(1, -0.21, 0, 1.33);
     &:hover {
       transform: rotate(360deg);
+    }
+    &:active {
+      animation-duration: 2s;
+      animation-name: myanim;
     }
   }
   span {
     position: absolute;
-    top: -6px;
+    top: -3px;
     left: 22px;
     color: $colorRegul;
     width: 19px;
@@ -109,6 +137,9 @@
 
 .my-account {
   height: 38px;
+  display: flex;
+  align-content: center;
+  position: relative;
   & > a {
     width: 130px;
     height: inherit;
@@ -119,6 +150,7 @@
     letter-spacing: 0.38px;
     line-height: 38px;
     margin-left: 26px;
+    transition: all 0.3s ease-in-out;
     &:hover {
       background-color: $colorRegul;
       color: $maincolor;
