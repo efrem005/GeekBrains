@@ -1,17 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-.button {
-  padding: 12px 14px;
-  text-transform: uppercase;
-  color: #4a4a4a;
-  font-weight: 700;
-  background-color: #ffffff;
-  border: 1px solid #eaeaea;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #4a4a4a;
-  color: #ffffff;
+.header-line {
+  border-bottom: 1px solid #ececec;
 }
 
 * {
@@ -55,10 +44,6 @@ a {
   -ms-flex-line-pack: center;
       align-content: center;
   position: relative;
-}
-
-.header-line {
-  border-bottom: 1px solid #ececec;
 }
 
 .logo {
@@ -369,6 +354,27 @@ a {
   color: #f16d7f;
 }
 
+.similar {
+  height: 620px;
+}
+
+.similar > .fetured {
+  height: 620px;
+}
+
+.similar > .fetured > .fetured__title {
+  color: #4d4d4d;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.similar > .fetured > .fetured__block {
+  height: 620px;
+}
+
 .fetured__title {
   font-family: Lato;
   font-size: 30px;
@@ -418,6 +424,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  cursor: pointer;
 }
 
 .fetured__item-header img {
@@ -454,6 +463,8 @@ a {
   width: 261px;
   height: 280px;
   background-color: #00000080;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
 }
 
 .fetured__item-hover img {

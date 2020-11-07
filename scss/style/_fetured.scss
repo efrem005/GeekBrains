@@ -1,3 +1,21 @@
+.similar {
+  height: 620px;
+  & > .fetured {
+    height: 620px;
+    & > .fetured__title {
+      color: #4d4d4d;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 20px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    & > .fetured__block {
+      height: 620px;
+    }
+  }
+}
+
 .fetured {
   &__title {
     font-family: Lato;
@@ -57,6 +75,7 @@
       width: 261px;
       height: 280px;
       background-color: #00000080;
+      transition-duration: 0.4s;
       img {
         width: 27px;
         height: 25px;
