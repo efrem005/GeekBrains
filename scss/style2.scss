@@ -3,11 +3,11 @@
 @import "./style/header"; // логотип, строка поика, корзина, аккаунт
 @import "./style/nav"; // навигация меню
 @import "./style/crumps"; // Хлебные крошки
-//@extend
 @import "./style/slide"; //слайдер
 @import "./style/description"; // форма заказа
-@import "./style/fetured"; //
-//@extend
+@import "./style/fetured"; // Похожие товары
 @import "./style/subscribe"; // отзывы, обратная связь
 @import "./style/footer-nav"; // навигация в footer
 @import "./style/footer"; // footer
+
+@import "./style/animate"; // Анимации
