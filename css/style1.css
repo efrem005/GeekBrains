@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-.button, .basket__bottom-reset, .basket__bottom-submit, .shopping button {
+.basket__bottom-reset, .basket__bottom-submit, .shopping button {
   padding: 12px 14px;
   text-transform: uppercase;
   color: #4a4a4a;
@@ -9,7 +9,7 @@
   cursor: pointer;
 }
 
-.button:hover, .basket__bottom-reset:hover, .basket__bottom-submit:hover, .shopping button:hover {
+.basket__bottom-reset:hover, .basket__bottom-submit:hover, .shopping button:hover {
   background-color: #4a4a4a;
   color: #ffffff;
 }
@@ -365,7 +365,6 @@ a {
 .crumps {
   height: 148px;
   background-color: #f8f3f4;
-  margin-bottom: 68px;
 }
 
 .crumps .container {
@@ -417,6 +416,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 68px;
   padding: 20px 0;
   border-bottom: 1px solid #eaeaea;
 }
