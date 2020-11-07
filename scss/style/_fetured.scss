@@ -32,6 +32,7 @@
     display: inline-block;
     flex-wrap: wrap;
     flex-direction: column;
+    transition: all 0.2s ease-in;
     &-header {
       img {
         width: 261px;
@@ -108,6 +109,7 @@
       text-align: center;
       display: flex;
       justify-content: center;
+      transition: all 0.3s ease-in;
       &:hover {
         background-color: $colorRegul;
         color: $maincolor;
@@ -120,4 +122,8 @@
       }
     }
   }
+}
+
+.similar > .fetured > .fetured__block {
+  height: 500px;
 }

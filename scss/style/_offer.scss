@@ -7,20 +7,23 @@
     width: 767px;
     min-height: 529px;
     position: relative;
+    display: flex;
+    align-items: center;
     img {
-      width: 767px;
+      width: inherit;
       object-fit: cover;
       object-position: top;
     }
     p {
       position: absolute;
-      top: 136px;
-      left: 38px;
+      // top: 136px;
+      // left: 38px;
       color: $colorRegul;
       font-size: 54px;
       font-weight: 700;
       line-height: 28px;
       text-transform: uppercase;
+      margin-left: 25px;
       span:first-child {
         letter-spacing: 1.5px;
         line-height: 54px;

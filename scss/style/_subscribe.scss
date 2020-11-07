@@ -1,7 +1,7 @@
 .subscribe {
   background: url("../img/layers-41.jpg");
   background-repeat: no-repeat;
-  background-position-y: bottom;
+  background-position: top;
   background-color: #f2f2f2;
   max-width: 1609px;
   min-height: 438px;
@@ -107,6 +107,7 @@
         color: $colorRegul;
         font-size: 14px;
         letter-spacing: 0.35px;
+        transition: all 0.3s ease-in-out;
         cursor: pointer;
         &:hover {
           background-color: $colorRegul;

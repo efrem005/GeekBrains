@@ -1,14 +1,14 @@
 .container > .footer__nav {
   display: flex;
-  flex-flow: nowrap;
-  justify-content: start;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 81px;
 }
 
 .text {
   &__block {
-    width: 432px;
-    height: 260px;
+    max-width: 432px;
+    min-height: 260px;
     display: flex;
     flex-direction: column;
     &-logo {
@@ -55,13 +55,6 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    &:nth-child(2) {
-      margin-left: 57px;
-    }
-    &:nth-child(3) {
-      margin-left: 127px;
-      margin-right: 79px;
-    }
     h1 {
       color: $maincolor;
       font-size: 18px;
@@ -80,6 +73,7 @@
       li {
         a {
           color: #898989;
+          transition: color 0.3s ease-in-out;
           &:hover {
             color: $textColor;
           }
