@@ -1,0 +1,209 @@
+.checkout {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  margin: 93px 0;
+  &__list {
+    width: inherit;
+    position: relative;
+    counter-reset: list;
+    li {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      flex-wrap: wrap;
+      min-height: 73px;
+      border-bottom: 1px solid #e8e8e8;
+      .checkbox {
+        display: none;
+        cursor: pointer;
+        &:checked ~ .checkout__list-block {
+          height: 430px;
+          padding-top: 20px;
+        }
+        &:checked ~ .checkout__list-title {
+          color: $maincolor;
+        }
+      }
+      &::before {
+        counter-increment: list;
+        content: "0" counter(list) ".";
+        display: flex;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+    &-title {
+      margin-left: 10px;
+      color: #222222;
+      font-family: Lato;
+      font-size: 16px;
+      line-height: 73px;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      &:hover {
+        color: $maincolor;
+      }
+    }
+    &-block {
+      width: 100%;
+      height: 0;
+      padding-left: 35px;
+      transition: all 2s ease-in-out;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  &--active {
+    color: $maincolor;
+  }
+}
+
+.checkout__formleft {
+  width: 50%;
+  h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    &:first-child {
+      margin: 0;
+    }
+  }
+  p {
+    color: #b3b2b2;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 24px;
+  }
+  &-radio {
+    position: relative;
+    margin-top: 8px;
+    display: flex;
+    cursor: pointer;
+    label {
+      font-size: 12px;
+      text-transform: uppercase;
+      cursor: pointer;
+      &::before {
+        content: " ";
+        display: inline-block;
+        position: relative;
+        top: 5px;
+        margin: 0 5px 0 0;
+        width: 14px;
+        height: 14px;
+        border-radius: 11px;
+        border: 2px solid #555555;
+        background-color: transparent;
+      }
+    }
+    input {
+      display: none;
+    }
+    input[type="radio"]:checked + label:after {
+      content: " ";
+      position: absolute;
+      top: 9px;
+      left: 4px;
+      width: 10px;
+      height: 10px;
+      border-radius: 11px;
+      background: #000000;
+    }
+  }
+
+  h4 a {
+    color: #b3b2b2;
+    font-size: 13px;
+    line-height: 20px;
+    &:hover {
+      color: $maincolor;
+    }
+    i {
+      margin-right: 5px;
+    }
+  }
+  button {
+    width: 180px;
+    height: 50px;
+    border: 1px solid #eaeaea;
+    background: #fff;
+    color: #4a4a4a;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 38px;
+    transition: all 0.4s ease;
+    &:hover {
+      background-color: #4a4a4a36;
+      color: #fff;
+    }
+  }
+}
+
+.checkout__formright {
+  width: 50%;
+  h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+  p {
+    color: #b3b2b2;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 24px;
+  }
+  h5 {
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    span {
+      font-size: 15px;
+      color: $maincolor;
+    }
+  }
+  input {
+    width: 390px;
+    height: 45px;
+    border: 1px solid #eaeaea;
+    padding: 0 10px;
+    margin-bottom: 13px;
+  }
+  h6 {
+    color: $maincolor;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  &-submit {
+    width: 330px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 12px;
+    button {
+      width: 180px;
+      height: 50px;
+      border: 1px solid #eaeaea;
+      background: #fff;
+      color: #4a4a4a;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      transition: all 0.4s ease;
+      &:hover {
+        background-color: #4a4a4a36;
+        color: #fff;
+      }
+    }
+    a {
+      font-size: 14px;
+      margin-bottom: 10px;
+      &:hover {
+        color: $maincolor;
+      }
+    }
+  }
+}
