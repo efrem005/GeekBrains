@@ -1,9 +1,9 @@
 .subscribe {
-  background: url("../img/layers-41.jpg");
+  background: url("../img/layer-41.jpg");
   background-repeat: no-repeat;
   background-position-y: bottom;
+  background-size: cover;
   background-color: #f2f2f2;
-  max-width: 1609px;
   min-height: 438px;
   margin: 0 auto;
   margin-bottom: 109px;
@@ -16,8 +16,10 @@
   }
   &__left {
     display: flex;
-    flex-direction: row;
-    width: 500px;
+    width: 50%;
+    min-height: inherit;
+    align-items: center;
+    border-right: 1px solid #fff;
     img {
       width: 86px;
       height: 86px;
@@ -27,6 +29,7 @@
       margin-right: 28px;
     }
     &-text {
+      width: 390px;
       p {
         font-style: italic;
         font-size: 16px;
@@ -70,7 +73,12 @@
     }
   }
   &__right {
-    width: 570px;
+    width: 50%;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     p {
       font-size: 22px;
       font-weight: 700;
