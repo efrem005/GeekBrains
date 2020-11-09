@@ -1,18 +1,11 @@
 .header {
-  display: flex;
   min-height: 100px;
-  align-items: center;
-  justify-content: space-between;
-  // border-bottom: 1px solid #ececec;
-  // & > * {
-  //   height: inherit;
-  //   display: flex;
-  //   align-content: center;
-  //   position: relative;
-  // }
-  &-line {
-    border-bottom: 1px solid #ececec;
-    box-sizing: content-box;
+  border-bottom: 1px solid #ececec;
+  & > .container {
+    min-height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   &__left,
   &__right {
@@ -44,14 +37,13 @@
 .search {
   border-radius: 3px;
   border: 1px solid #e6e6e6;
-  overflow: hidden;
   height: 38px;
   display: flex;
   align-content: center;
-  position: relative;
   & > .search__browse {
-    height: inherit;
+    position: relative;
     width: 87px;
+    height: inherit;
     border-radius: 3px 0 0 3px;
     background-color: #d6d6d62e;
     text-align: center;
@@ -63,17 +55,66 @@
     transition: background-color 0.3s ease-in-out;
     &:hover {
       background-color: #a4a4a423;
+      & > .search__browse-menu {
+        height: auto;
+        overflow: visible;
+      }
     }
     i {
       margin-left: 5px;
     }
   }
+  &__browse-menu {
+    position: absolute;
+    width: 220px;
+    height: 0;
+    border-radius: 5px;
+    background-color: #ffffff;
+    z-index: 100;
+    line-height: normal;
+    padding-left: 15px;
+    box-shadow: 1px 0 8px #ccc;
+    text-align: left;
+    overflow: hidden;
+    h2 {
+      max-width: 150px;
+      font-size: 16px;
+      font-weight: 600;
+      border-bottom: 1px solid #e8e8e8;
+      line-height: 40px;
+    }
+    ul {
+      list-style: none;
+      margin-top: 16px;
+      margin-bottom: 25px;
+      margin-left: 5px;
+      li {
+        a {
+          letter-spacing: 0.35px;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 23px;
+          transition: color 0.15s;
+          &:hover {
+            color: $maincolor;
+          }
+        }
+      }
+    }
+    &::before {
+      content: "\f0d8";
+      font-family: "FontAwesome";
+      position: relative;
+      top: -11px;
+      left: 52px;
+      color: #ffffff;
+      width: 14px;
+    }
+  }
   &__input {
     width: 280px;
-    height: inherit;
     padding: 0 15px;
     outline: none;
-    overflow: hidden;
     border: none;
     border-right: 1px solid #e6e6e6;
     border-left: 1px solid #e6e6e6;
@@ -110,7 +151,6 @@
     width: 32px;
     height: 29px;
     transform: rotate(0);
-
     transition: transform 2s cubic-bezier(1, -0.21, 0, 1.33);
     &:hover {
       transform: rotate(360deg);
@@ -132,6 +172,93 @@
     font-size: 12px;
     line-height: 19px;
     text-align: center;
+  }
+  &__menu {
+    position: absolute;
+    top: 40px;
+    left: -95px;
+    width: 262px;
+    height: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 0 8px $lineColor;
+    padding: 0 18px;
+    overflow: hidden;
+    z-index: 20;
+    &_items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid $lineColor;
+      h2 {
+        font-size: 12px;
+        font-weight: 700;
+      }
+      span {
+        background-color: transparent;
+      }
+      p {
+        color: #f16d7f;
+        font-size: 12px;
+        font-weight: 400;
+      }
+      button {
+        border: none;
+        background-color: transparent;
+        color: #c0c0c0;
+      }
+    }
+    &-cent {
+      display: flex;
+      justify-content: space-between;
+      margin: 19px 0 32px;
+      h2 {
+        font-size: 16px;
+        font-weight: 700;
+      }
+      span {
+        width: auto;
+        height: auto;
+        position: unset;
+        font-size: 16px;
+        font-weight: 700;
+        color: $maincolor;
+        background-color: transparent;
+        border-radius: 0;
+      }
+    }
+
+    img {
+      width: 72px;
+      height: 85px;
+      transition: none;
+    }
+    span {
+      position: unset;
+    }
+    &-btn {
+      width: 100%;
+      height: 50px;
+      background-color: $colorRegul;
+      color: $maincolor;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border: 1px solid $maincolor;
+      margin-bottom: 11px;
+      transition: all 0.2s;
+      &:hover {
+        color: $colorRegul;
+        background-color: $maincolor;
+      }
+    }
+  }
+  &:hover {
+    & > .cart__menu {
+      height: auto;
+      overflow: visible;
+    }
   }
 }
 
