@@ -1,4 +1,5 @@
 .top-nav {
+  position: relative;
   display: flex;
   justify-content: center;
   min-height: 51px;
@@ -15,9 +16,12 @@
       padding: 15px 20px;
       position: relative;
       transform: perspective(1px) translateZ(0);
-      &:hover::before {
-        left: 0;
-        right: 0;
+      z-index: 1;
+      &:hover {
+        &::before {
+          left: 0;
+          right: 0;
+        }
       }
       &:before {
         content: "";
@@ -34,6 +38,7 @@
       }
     }
   }
+
   & > .menu-link {
     display: block;
     padding: 20px 10px;
@@ -43,22 +48,98 @@
   }
 }
 
+.menu-item {
+  position: relative;
+  &:hover {
+    & > .menu-item-menu {
+      height: 310px;
+      overflow: visible;
+    }
+  }
+  &-menu {
+    min-width: 850px;
+    height: 0;
+    position: absolute;
+    top: 26px;
+    left: -95px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 0 8px $lineColor;
+    z-index: 10;
+    padding: 0 25px;
+    overflow: hidden;
+    ul {
+      list-style: none;
+    }
+    h2 {
+      max-width: 210px;
+      font-size: 16px;
+      font-weight: 600;
+      border-bottom: 1px solid #e8e8e8;
+      line-height: 40px;
+    }
+    a {
+      letter-spacing: 0.35px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 27px;
+      transition: color 0.15s;
+      &:hover {
+        color: $maincolor;
+      }
+      img {
+        margin-top: 30px;
+      }
+    }
+    div {
+      width: 270px;
+    }
+    &::before {
+      content: "\f0d8";
+      font-family: "FontAwesome";
+      position: relative;
+      top: -9px;
+      left: 114px;
+      color: #ffffff;
+      width: 14px;
+    }
+  }
+}
+
 .active {
   border-bottom: 3px solid $maincolor;
 }
 
-#menu-header-checkbox {
+.menu__open-checkbox {
   display: none;
 }
 
-#menu-header-checkbox ~ label {
+.menu__open-checkbox ~ label {
   display: none;
   padding: 5px;
   font-size: 30px;
 }
 
-#menu-header-checkbox:checked ~ .menu-list {
-  height: 270px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+.menu__open {
+  color: $maincolor;
+}
+
+.menu__close {
+  color: $textColor;
+}
+.menu__open-checkbox:checked {
+  & ~ .menu-list {
+    height: 270px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  & ~ .menu__open {
+    display: none;
+  }
+  & ~ .menu__close {
+    display: block;
+  }
 }

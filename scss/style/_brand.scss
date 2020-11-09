@@ -4,7 +4,7 @@
   background-image: url("../img/topHeaderBack.png");
   background-repeat: no-repeat;
   background-position: 72% 0;
-  &__block {
+  & > .container {
     height: inherit;
     display: flex;
     align-items: center;
