@@ -4,13 +4,13 @@
   margin-bottom: 96px;
   &__seller {
     display: inherit;
-    width: 767px;
+    max-width: 767px;
     min-height: 529px;
     position: relative;
     img {
-      width: 767px;
+      width: 100%;
       object-fit: cover;
-      object-position: top;
+      object-position: center;
     }
     p {
       position: absolute;
@@ -38,22 +38,16 @@
     min-height: 529px;
     display: inherit;
     flex-direction: column;
-    justify-content: space-between;
-    align-content: space-between;
+    justify-content: space-around;
     background: #222224;
     color: #fbfbfb;
-    padding: 35px;
     &-cart {
       display: inherit;
-      flex-direction: row;
-      img {
-        width: 45px;
-        height: 33px;
-        object-fit: cover;
-        object-position: top;
-        margin-right: 33px;
-      }
+      align-items: end;
+      width: 100%;
+      justify-content: space-evenly;
       div {
+        width: 60%;
         h2 {
           font-size: 20px;
           font-weight: 700;
